@@ -42,7 +42,7 @@ static const void *const kViewStackKey = &kViewStackKey;
     NSString *className = NSStringFromClass([self class]);
     NSString *message = [NSString stringWithFormat:@"Possibly Memory Leak.\nIn case that %@ should not be dealloced, override -willDealloc in %@ by returning NO.\nView-ViewController stack: %@", className, className, [self viewStack]];
     NSLog(@"%@", message);
-    NSAssert(NO, message);
+//    NSAssert(NO, message);
 }
 
 - (NSArray *)viewStack {
